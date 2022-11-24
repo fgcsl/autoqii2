@@ -1,0 +1,6 @@
+sample-id	forward-absolute-filepath	reverse-absolute-filepath	Type
+#q2:types	categorical	categorical	categorical
+BPP01_1	$PWD/Paired-End-Analysis/raw_data/HAM29_R1.fastq	$PWD/Paired-End-Analysis/raw_data/HAM29_R2.fastq	BPP 01
+BPP01_2	$PWD/Paired-End-Analysis/raw_data/HAM30_R1.fastq	$PWD/Paired-End-Analysis/raw_data/HAM30_R2.fastq	BPP 01
+BPG01_1	$PWD/Paired-End-Analysis/raw_data/ERR4362125_1.fastq	$PWD/Paired-End-Analysis/raw_data/ERR4362125_2.fastq	BPG 01
+BPG01_2	$PWD/Paired-End-Analysis/raw_data/ERR4362126_1.fastq	$PWD/Paired-End-Analysis/raw_data/ERR4362126_2.fastq	BPG 01

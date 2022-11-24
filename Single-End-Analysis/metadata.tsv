@@ -1,0 +1,6 @@
+sample-id	absolute-filepath	Type
+#q2:types	categorical	categorical
+sample_1	$PWD/Single-End-Analysis/raw_data/sample1_R1.fastq	compost_sample
+sample_2	$PWD/Single-End-Analysis/raw_data/sample2_R1.fastq	compost_sample
+sample_3	$PWD/Single-End-Analysis/raw_data/sample3_R1.fastq	soil_sample
+sample_4	$PWD/Single-End-Analysis/raw_data/sample4_R1.fastq	soil_sample
