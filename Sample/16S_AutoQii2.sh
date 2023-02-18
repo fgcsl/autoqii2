@@ -236,7 +236,7 @@ then
         rm check_file.sh
         qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
 else
-	echo "$(tput setaf 9) Error: mainfest.tsv not created make shure your metada file is tab seperated (tsv) file. please check and run again.$(tput sgr 0)";
+	echo "$(tput setaf 9) Error: mainfest.tsv not created make sure your metada file is tab seperated (tsv) file. please check and run again.metadata.tsv file is not a tsv file, may be it containe some  extra space or extra tab.$(tput sgr 0)";
 	exit 1
 fi
 
@@ -307,7 +307,8 @@ validations_function() {
                 while [[ -z $group_type  ]] || [[ "$group_type" =~ ^[0-9]+$ ]]; do
                 echo
                 echo "$(tput setaf 9) Please enter Group Type from  mainfest.tsv file $(tput sgr 0)"
-                read -p "Specified a header for Grouping  your data from mainfest.tsv file  (example:Type)  : " group_type
+                #read -p "Specified a header for Grouping  your data from mainfest.tsv file  (example:Type)  : " group_type
+                read -p "For result-type (sample-wise or individual) you have to specify a header name(from first row) of metada.tsv file(example:Type (Capital T))  : "  group_type
         done
 
 }
@@ -429,7 +430,7 @@ then
         echo "Taxonomic analysis Successfully Done"
 	echo "To view barplot use command : qiime tools view taxa-bar-plots.qzv"
 else
-        echo "$(tput setaf 9) Error: mainfest.tsv is not found please make mainfest.tsv file for taxa-bar-plot $(tput sgr 0)"
+        echo "$(tput setaf 9) Error: metadata.tsv file is not a tsv file. please check your metadata.tsv may have some extra space or extra tab.$(tput sgr 0)"
 	exit 1
 
 fi
@@ -952,7 +953,7 @@ validations_function() {
 
 
 
-        read -p "Specified a header for Grouping  your data from mainfest.tsv file  (example:Type)  : " group_type
+        read -p "For result-type (sample-wise or individual) you have to specify a header name(from first row) of metada.tsv file(example:Type (Capital T))  : " group_type
                 while [[ -z $group_type ]]; do
                 echo
                 echo "$(tput setaf 10) Please enter Group Type from  mainfest.tsv file $(tput sgr 0)"
