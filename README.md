@@ -4,9 +4,8 @@ The AutoQii2 Pipeline can be used to analysisng 16S amplicon based datasets. Aut
 
 ## AutoQii2 Pipeline (Workflow)
 
-![Figure 2](https://user-images.githubusercontent.com/60095100/203746551-9b821bfd-0b44-4fda-82ae-508aab0a89c9.jpg)
+ ![Figure 2_R1](https://user-images.githubusercontent.com/60095100/228609360-39e00bb3-e2fc-4db2-9a4d-7bc72aa8d213.jpg)
 
- 
 ## Clone this GitLab Repository
 
 ```
