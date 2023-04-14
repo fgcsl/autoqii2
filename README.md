@@ -50,6 +50,22 @@ $ cutadapt --help
 Qiime 2 can be installed natively or using virtual machines. For this pipeline we prefer to install with native method
 (https://docs.qiime2.org/2021.4/install/native)
 
+#### 4. Picrust 2
+
+For Functional analysis user need to install picrust in qiime 2 envirnment
+```
+#Install q2-picrust2 with conda. This command will automatically install the other requirements, including PICRUSt2. 
+*Note that the plugin version for qiime2-2021.2 is specified
+
+conda install q2-picrust2=2021.2 -c conda-forge -c bioconda -c gavinmdouglas
+```
+```
+conda install -c bioconda -c conda-forge picrust2
+pip install -e .
+qiime dev refresh-cache
+qiime picrust2 --help
+```
+
 #### 4. Greengenes File
 For Taxonomic analysis you need to Download Greengenes file according to your qiime2 version.
 Open the ([link](https://docs.qiime2.org/2021.4/tutorials/moving-pictures/)) and download the greengene file from Taxonomic analyis section. Please ensure to change the version of qiime2 in the website, similar to your current qiime2 version (Select greengene file from qiime2 official ([link](https://docs.qiime2.org/2021.4/tutorials/moving-pictures/)) According to your qiime version). 
