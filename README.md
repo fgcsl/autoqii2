@@ -57,7 +57,9 @@ For Functional analysis user need to install picrust in qiime 2 envirnment
 #Install q2-picrust2 with conda. This command will automatically install the other requirements, including PICRUSt2. 
 *Note that the plugin version for qiime2-2021.2 is specified
 
-conda install q2-picrust2=2021.2 -c conda-forge -c bioconda -c gavinmdouglas
+$ conda install q2-picrust2=2021.2 -c conda-forge -c bioconda -c gavinmdouglas
+
+*"2021.2" need to be edit according to your qiime 2 version
 ```
 ##### OR 
 ```
