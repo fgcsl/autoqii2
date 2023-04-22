@@ -1,6 +1,6 @@
 # AutoQii2
 
-The AutoQii2 Pipeline can be used to analysisng 16S amplicon based datasets. AutoQii2 is primarily designed for eliminating multi-step analysis involved in analyzing paired-end or single-end reads using QIIME2. AutoQii2 uses popular fastQC, cutadapt and QIIME2 platforms for performing quality check, adapter and chimera removal, ASV feature identification and taxonomic assignments.
+The AutoQii2 Pipeline can be used to analyzing 16S amplicon based datasets. AutoQii2 is primarily designed for eliminating multi-step analysis involved in analyzing paired-end or single-end reads using QIIME2. AutoQii2 uses popular fastQC, cutadapt and QIIME2 platforms for performing quality check, adapter and chimera removal, ASV feature identification and taxonomic assignments.
 
 ## AutoQii2 Pipeline (Workflow)
 
