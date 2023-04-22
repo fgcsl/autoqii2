@@ -84,7 +84,7 @@ After Successful compilation of all Reqirements, the pipeline currently performs
 * Trimming of reads ([Cutadapt](https://journal.embnet.org/index.php/embnetjournal/article/view/200))
 * Taxonomical classification using DADA2 with [QIIME2](https://www.nature.com/articles/s41587-019-0209-9)
 * Excludes unwanted taxa, produces absolute and relative feature/taxa count tables and plots, plots alpha rarefaction curves, computes alpha and beta diversity indices and plots thereof ([QIIME2](https://www.nature.com/articles/s41587-019-0209-9))
-
+* Functional abundance ([Picrust2](https://huttenhower.sph.harvard.edu/picrust/))
 
 ## Steps for Paired End Sequencing
 
