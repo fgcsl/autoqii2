@@ -52,7 +52,7 @@ Qiime 2 can be installed natively or using virtual machines. For this pipeline w
 
 #### 4. Picrust 2
 
-For Functional analysis user need to install picrust in qiime 2 envirnment
+For Functional analysis user need to install picrust in Qiime 2 environment
 ```
 #Install q2-picrust2 with conda. This command will automatically install the other requirements, including PICRUSt2. 
 *Note that the plugin version for qiime2-2021.2 is specified
