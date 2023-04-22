@@ -1253,3 +1253,63 @@ else
 	echo "You entered Wrong analysis type. Please rerun the script again"
 fi
 
+
+
+
+echo ""
+echo "====================================================="
+echo "           Predecting Functional abundence on process"
+echo "====================================================="
+echo ""
+
+if [ -f Results_PE/rep-seqs.qza ] || [ -f Results_PE/table.qza ]
+then
+	mkdir -p Picrust2_result
+	cp Results_PE/rep-seqs.qza Results_PE/table.qza Picrust2_result
+	cd Picrust2_result
+	qiime picrust2 full-pipeline --i-table table.qza --i-seq rep-seqs.qza --output-dir picrust2_output --p-placement-tool sepp --p-threads 56 --p-hsp-method pic --p-max-nsti 2 --verbose
+else 
+	echo "Error: Functional annotation analysis require two files (rep-seqs and table.qza) under Results_PE directory"
+	exit 1
+fi
+
+if [ -d picrust2_output ]
+then
+	#########################For pathway_abundance#################
+	
+	qiime feature-table summarize --i-table picrust2_output/pathway_abundance.qza --o-visualization picrust2_output/pathway_abundance.qzv
+	qiime tools export --input-path picrust2_output/pathway_abundance.qza --output-path pathabun_exported
+	biom convert -i pathabun_exported/feature-table.biom   -o pathabun_exported/feature-table.biom.tsv --to-tsv
+	cd pathabun_exported
+	#edit first two rows of "feature-table.biom.tsv" file (see attachment)
+	sed '1,2d' feature-table.biom.tsv > edit_feature-table.biom.tsv
+
+	add_descriptions.py -i  edit_feature-table.biom.tsv -m METACYC -o abun.tsv
+	
+	###########################For EC_metagenome
+
+	cd ..
+	qiime tools export --input-path picrust2_output/ec_metagenome.qza --output-path EC_meta_exported
+	biom convert -i EC_meta_exported/feature-table.biom   -o EC_meta_exported/feature-table.biom.tsv --to-tsv
+	cd  EC_meta_exported
+	#edit first two rows of "feature-table.biom.tsv" file (see attachment)
+	sed '1,2d' feature-table.biom.tsv > edit_feature-table.biom.tsv
+	add_descriptions.py -i  edit_feature-table.biom.tsv -m EC -o EC_metagenome.tsv
+
+	##########################For KO_metagenome
+
+	cd ..
+	qiime tools export --input-path picrust2_output/ko_metagenome.qza --output-path KO_meta_exported
+	biom convert -i KO_meta_exported/feature-table.biom   -o KO_meta_exported/feature-table.biom.tsv --to-tsv
+	cd KO_meta_exported
+	#edit first two rows of "feature-table.biom.tsv" file (see attachment)
+	sed '1,2d' feature-table.biom.tsv > edit_feature-table.biom.tsv
+
+	add_descriptions.py -i  edit_feature-table.biom.tsv -m KO -o KO_metagenome.tsv
+
+else 
+	echo "Error: Picrust2_output directory not found. Please check Results_PE dirctory having table.qza and rep-seq.qza"
+fi
+
+
+
