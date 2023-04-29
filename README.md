@@ -1,9 +1,8 @@
 # AutoQii2
 
-The AutoQii2 Pipeline can be used to analyzing 16S amplicon based datasets. AutoQii2 is primarily designed for eliminating multi-step analysis involved in analyzing paired-end or single-end reads using QIIME2. AutoQii2 uses popular fastQC, cutadapt and QIIME2 platforms for performing quality check, adapter and chimera removal, ASV feature identification and taxonomic assignments.
+The AutoQii2 Pipeline can be used to analyzing 16S rRNA amplicon based datasets. AutoQii2 is primarily designed for eliminating multi-step analysis involved in analyzing paired-end or single-end reads using QIIME2. AutoQii2 uses popular fastQC, cutadapt and QIIME2 platforms for performing quality check, adapter trimming, ASV feature identification and taxonomic assignments.
 
 ## AutoQii2 Pipeline (Workflow)
-
 
 ![revised_figure2](https://user-images.githubusercontent.com/60095100/235307015-da29a543-bf83-4adf-bc15-6e08cf9c73bf.jpg)
 
@@ -53,7 +52,7 @@ Qiime 2 can be installed natively or using virtual machines. For this pipeline w
 
 #### 4. Picrust 2
 
-For Functional analysis user need to install picrust in Qiime 2 environment
+For predicting functional abundance user need to install picrust in Qiime 2 environment
 ```
 #Install q2-picrust2 with conda. This command will automatically install the other requirements, including PICRUSt2. 
 *Note that the plugin version for qiime2-2021.2 is specified
