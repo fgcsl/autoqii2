@@ -62,13 +62,6 @@ $ conda install q2-picrust2=2021.2 -c conda-forge -c bioconda -c gavinmdouglas
 
 *"2021.2" need to be edit according to your qiime 2 version
 ```
-##### OR 
-```
-conda install -c bioconda -c conda-forge picrust2
-pip install -e .
-qiime dev refresh-cache
-qiime picrust2 --help
-```
 
 #### 5. Greengenes File
 For Taxonomic analysis you need to Download Greengenes file according to your qiime2 version.
