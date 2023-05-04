@@ -1,5 +1,14 @@
 #!/bin/bash
 
+## autoqii2: Qiime 2 automated workflow
+## Author: This script Written by  Abhishek Khatri 
+## Remember to edit metadata.tsv file
+## Run as 16S_AutoQii2.sh in conda envirnment
+## make sure all required software installed in your system before running the pipeline
+
+
+
+
 echo "Select Option number:"
 echo "1) Single-End"
 echo "2) Paired-End"
