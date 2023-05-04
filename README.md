@@ -187,7 +187,7 @@ $git clone https://gitlab.com/khatriabhi2319/autoqii2.git
 
 ### What to do next and how to select parameters ? 
 
-#####  1. A welcome Message:
+#####  1. A zenity display (dialog-box) Welcome Message:
 
 ![oie_BUPGzoM9vJWy](https://user-images.githubusercontent.com/60095100/191945730-ca665efd-3549-4991-835c-5cb0cddc7610.png)
 
