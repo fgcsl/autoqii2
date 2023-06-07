@@ -2,6 +2,8 @@
 
 The AutoQii2 Pipeline can be used to analyzing 16S rRNA amplicon based datasets. AutoQii2 is primarily designed for eliminating multi-step analysis involved in analyzing paired-end or single-end reads using QIIME2. AutoQii2 uses popular fastQC, cutadapt and QIIME2 platforms for performing quality check, adapter trimming, ASV feature identification and taxonomic assignments.
 
+Publication Link: (https://academic.oup.com/database/article/doi/10.1093/database/baad039/7190069?searchresult=1)
+
 ## AutoQii2 Pipeline (Workflow)
 
 ![revised_figure2](https://user-images.githubusercontent.com/60095100/235307015-da29a543-bf83-4adf-bc15-6e08cf9c73bf.jpg)
